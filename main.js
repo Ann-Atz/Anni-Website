@@ -1,6 +1,6 @@
 // mit npm init -y wird package json geholt
 
-import express from 'express'
+import express from 'express';
 // wofür? Funktionalität von express: Menschen haben packages/codes für andere geschrieben den wir nutzen können
 // node wurde für Serverseitiges Coden erstellt
 // Express erleichtert uns Webseiten zu hosten
@@ -8,7 +8,7 @@ import express from 'express'
 Extra:
 app.get('/hello') // wo wollen wir hin? zu www.webseite/hello
 */
-import path from 'path'
+import path from 'path';
 import {env} from 'process';
 
 const PORT = process.env.PORT || 3000;
@@ -25,7 +25,7 @@ const publicDir = path.join(__dirname, 'public');
 app.use('/', express.static(publicDir));
 // TO DO:
 // npm install express
-// mit nod main.js ausführen
+// mit node main.js ausführen
 
 app.listen(port, () => { // starte Server
     console.log('Example app listening on port : ${port}');
@@ -34,4 +34,3 @@ app.listen(port, () => { // starte Server
 // Mehrere webservers starten will
 // wenn man nur localhost eingebe, und parallel viele Sachen laufen muss der Rechner wissen
 // wohin er soll mit dem Port
-
